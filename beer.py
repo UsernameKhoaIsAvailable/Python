@@ -1,0 +1,340 @@
+beers = [
+    {
+        "price": "$16.99",
+        "name": "Founders All Day IPA",
+        "rating": {
+            "average": 4.411243509154233,
+            "reviews": 453
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h00/h94/11891416367134.png",
+        "id": 1
+    },
+    {
+        "price": "$13.99",
+        "name": "Blue Moon Belgian White Belgian-Style Wheat Ale",
+        "rating": {
+            "average": 4.775260833383482,
+            "reviews": 305
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/he8/h67/11931543830558.png",
+        "id": 2
+    },
+    {
+        "price": "$16.99",
+        "name": "Guinness Extra Stout",
+        "rating": {
+            "average": 3.9785961474594638,
+            "reviews": 119
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h50/h90/11996630056990.png",
+        "id": 3
+    },
+    {
+        "price": "$8.99",
+        "name": "Guinness Extra Stout",
+        "rating": {
+            "average": 3.5135460961961718,
+            "reviews": 199
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h35/he7/11996577726494.png",
+        "id": 4
+    },
+    {
+        "price": "$15.49",
+        "name": "Sierra Nevada Pale Ale",
+        "rating": {
+            "average": 4.266364643483868,
+            "reviews": 414
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h19/h43/11735160193054.png",
+        "id": 5
+    },
+    {
+        "price": "$15.49",
+        "name": "Sierra Nevada Pale Ale",
+        "rating": {
+            "average": 3.141161723541611,
+            "reviews": 459
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h0a/h17/11589987434526.png",
+        "id": 6
+    },
+    {
+        "price": "$15.99",
+        "name": "Lagunitas IPA",
+        "rating": {
+            "average": 1.7610665871324303,
+            "reviews": 358
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hd2/hfd/11348869382174.png",
+        "id": 7
+    },
+    {
+        "price": "$11.99",
+        "name": "Dogfish Head 120-Minute IPA",
+        "rating": {
+            "average": 3.1053162095618543,
+            "reviews": 64
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hf7/h2e/8814407614494.png",
+        "id": 8
+    },
+    {
+        "price": "$15.49",
+        "name": "Sierra Nevada Torpedo Extra IPA",
+        "rating": {
+            "average": 1.1092369711087207,
+            "reviews": 345
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/ha5/h01/8799883329566.png",
+        "id": 9
+    },
+    {
+        "price": "$15.99",
+        "name": "Sierra Nevada Hazy Little Thing IPA",
+        "rating": {
+            "average": 3.9890785544340925,
+            "reviews": 170
+        },
+        "image": "https://www.totalwine.com/media/sys_master/cmsmedia/hff/h0e/8979036078110.png",
+        "id": 10
+    },
+    {
+        "price": "$14.99",
+        "name": "New Holland Dragon's Milk",
+        "rating": {
+            "average": 1.2005615080794012,
+            "reviews": 493
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hf1/hef/11388243083294.png",
+        "id": 11
+    },
+    {
+        "price": "$12.99",
+        "name": "New Belgium Oakspire Bourbon Barrel Ale",
+        "rating": {
+            "average": 2.0996330805016186,
+            "reviews": 342
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h8b/h8f/11475320012830.png",
+        "id": 12
+    },
+    {
+        "price": "$7.49",
+        "name": "Guinness Draught",
+        "rating": {
+            "average": 1.4506545003190645,
+            "reviews": 452
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hcc/h64/11996579201054.png",
+        "id": 13
+    },
+    {
+        "price": "$10.99",
+        "name": "Dogfish Head 60-Minute IPA",
+        "rating": {
+            "average": 1.3770307904176358,
+            "reviews": 324
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h17/hc9/10124015599646.png",
+        "id": 14
+    },
+    {
+        "price": "$7.99",
+        "name": "Blue Moon Belgian White Belgian-Style Wheat Ale",
+        "rating": {
+            "average": 4.041128289991199,
+            "reviews": 50
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h5b/hff/11941592694814.png",
+        "id": 15
+    },
+    {
+        "price": "$16.99",
+        "name": "Guinness Draught",
+        "rating": {
+            "average": 2.9002860700543973,
+            "reviews": 401
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h66/h6a/11996634775582.png",
+        "id": 16
+    },
+    {
+        "price": "$10.99",
+        "name": "Weihenstephaner Hefe Weissbier",
+        "rating": {
+            "average": 2.89292945072894,
+            "reviews": 267
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h19/he2/11969419083806.png",
+        "id": 17
+    },
+    {
+        "price": "$2.29",
+        "name": "Cigar City Jai-Alai IPA",
+        "rating": {
+            "average": 3.779669618771213,
+            "reviews": 206
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hdb/h25/11969380712478.png",
+        "id": 18
+    },
+    {
+        "price": "$21.99",
+        "name": "Bell's Two Hearted Ale",
+        "rating": {
+            "average": 1.768500733899927,
+            "reviews": 63
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hfc/h84/11735172120606.png",
+        "id": 19
+    },
+    {
+        "price": "$12.99",
+        "name": "Kentucky Bourbon Barrel Ale",
+        "rating": {
+            "average": 2.2328898766089313,
+            "reviews": 377
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h0f/h40/11931598913566.png",
+        "id": 20
+    },
+    {
+        "price": "$12.99",
+        "name": "Dogfish Head 90-Minute IPA",
+        "rating": {
+            "average": 3.7771776781196387,
+            "reviews": 496
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hd0/h80/11717909905438.png",
+        "id": 21
+    },
+    {
+        "price": "$9.49",
+        "name": "Sierra Nevada Hazy Little Thing IPA",
+        "rating": {
+            "average": 1.4359814370189987,
+            "reviews": 351
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h42/h71/11375171207198.png",
+        "id": 22
+    },
+    {
+        "price": "$4.99",
+        "name": "Bell's Double Two Hearted",
+        "rating": {
+            "average": 4.268804254746469,
+            "reviews": 74
+        },
+        "image": "https://www.totalwine.com/media/sys_master/cmsmedia/hff/h0e/8979036078110.png",
+        "id": 23
+    },
+    {
+        "price": "$11.99",
+        "name": "Victory Golden Monkey Ale",
+        "rating": {
+            "average": 3.1676642120290497,
+            "reviews": 141
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hab/ha1/11849258827806.png",
+        "id": 24
+    },
+    {
+        "price": "$18.49",
+        "name": "Founders Underground Mountain Brown",
+        "rating": {
+            "average": 2.1446471059009395,
+            "reviews": 319
+        },
+        "image": "https://www.totalwine.com/media/sys_master/cmsmedia/hff/h0e/8979036078110.png",
+        "id": 25
+    },
+    {
+        "price": "$10.99",
+        "name": "Bell's Two Hearted Ale",
+        "rating": {
+            "average": 2.857913327526303,
+            "reviews": 440
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hd0/h7c/8813760610334.png",
+        "id": 26
+    },
+    {
+        "price": "$89.99",
+        "name": "Blue Moon Belgian White Belgian-Style Wheat Ale",
+        "rating": {
+            "average": 1.508525625330103,
+            "reviews": 381
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/hc2/he9/11975816085534.png",
+        "id": 27
+    },
+    {
+        "price": "$11.49",
+        "name": "Elysian Space Dust IPA",
+        "rating": {
+            "average": 1.56330286120944,
+            "reviews": 203
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h0f/hb6/11735169466398.png",
+        "id": 28
+    },
+    {
+        "price": "$12.49",
+        "name": "Duvel Belgian Ale",
+        "rating": {
+            "average": 2.5572486237237335,
+            "reviews": 191
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/h0c/h86/8810864082974.png",
+        "id": 29
+    },
+    {
+        "price": "$9.99",
+        "name": "Founders Breakfast Stout",
+        "rating": {
+            "average": 2.536098631569753,
+            "reviews": 105
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/ha2/he2/8796687728670.png",
+        "id": 30
+    },
+    {
+        "price": "$9.99",
+        "name": "Founders Breakfast Stout",
+        "rating": {
+            "average": 2.536098631569753,
+            "reviews": 105
+        },
+        "image": "https://www.totalwine.com/media/sys_master/twmmedia/ha2/he2/8796687728670.png",
+        "id": 30
+    },
+
+]
+
+print('id, name, price, average_rating, reviews, image')
+# for i in range(len(beers)):
+#     print(str(beers[i]["id"]) + ", " + beers[i]["name"] + ", " + beers[i]["price"] + ", " + str(beers[i]
+#           ["rating"]["average"]) + ", " + str(beers[i]["rating"]["reviews"]) + ', ' + beers[i]["image"])
+
+
+# for i in range(len(beers)):
+#     beer = beers[i]
+#     ...
+
+# for beer in beers[::-1]:
+#     print(str(beer["id"]) + ", " + beer["name"] + ", " + beer["price"] + ", " + str(
+#         beer["rating"]["average"]) + ", " + str(beer["rating"]["reviews"]) + ', ' + beer["image"])
+
+for beer in beers[::-1]:
+    line = [
+        str(beer["id"]),
+        beer["name"],
+        beer["price"],
+        str(beer["rating"]["average"]),
+        str(beer["rating"]["reviews"]),
+        beer["image"]
+    ]
+
+    print(", ".join(line))
+
