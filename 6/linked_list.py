@@ -8,6 +8,7 @@ class LinkedList:
         self.length = 0
         self.head = None
         self.tail = None
+        
     def add(self, new_data):
         new_node = Node(new_data)
 
