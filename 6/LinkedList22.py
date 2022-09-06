@@ -9,22 +9,22 @@ class LinkedList22(LinkedList):
 
         while current_node != None:
             if i == index:
-                return current_node.data
+                return current_node
             current_node = current_node.next
             i += 1
        
-ex = LinkedList22()
-ex.add('hello')
-ex.add('hello')
-ex.add('xinchao')
-ex.add('tambiet')
-ex.add('vinhbiet')
-ex.add('hfdjhfjshhf')
-ex.add('hfujhsfuhsfudhsfjdshf')
-ex.add('hfueeifonvfnvfueiewnf0')
-ex.add('qwerertyuio')
-ex.add('qwerertyuio')
-ex.add('qwerertyuio')
-ex.add('qwerertyuio')
-print(ex)
-print(ex.return_Kth_to_last(7))
+# ex = LinkedList22()
+# ex.add('hello')
+# ex.add('hello')
+# ex.add('xinchao')
+# ex.add('tambiet')
+# ex.add('vinhbiet')
+# ex.add('hfdjhfjshhf')
+# ex.add('hfujhsfuhsfudhsfjdshf')
+# ex.add('hfueeifonvfnvfueiewnf0')
+# ex.add('qwerertyuio')
+# ex.add('qwerertyuio')
+# ex.add('qwerertyuio')
+# ex.add('qwerertyuio')
+# print(ex)
+# print(ex.return_Kth_to_last(7))
