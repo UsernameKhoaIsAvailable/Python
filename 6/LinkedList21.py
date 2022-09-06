@@ -21,16 +21,16 @@ class LinkedList21(LinkedList):
     
 
 
-ex =LinkedList21()
-ex.add('hello')
-ex.add('hello')
-ex.add('xinchao')
-ex.add('tambiet')
-ex.add('vinhbiet')
-print(ex)
-ex.remove_dups()
-print(ex)
-print(ex.length)
-print(ex.head.data)
-print(ex.tail.data)
+# ex =LinkedList21()
+# ex.add('hello')
+# ex.add('hello')
+# ex.add('xinchao')
+# ex.add('tambiet')
+# ex.add('vinhbiet')
+# print(ex)
+# ex.remove_dups()
+# print(ex)
+# print(ex.length)
+# print(ex.head.data)
+# print(ex.tail.data)
 
