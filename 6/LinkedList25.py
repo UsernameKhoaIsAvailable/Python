@@ -1,13 +1,12 @@
-from unittest import result
 from Doubly_LinkedList import DoublyLinkedList
 
-def plus_2_LinkedList(LinkedList1, LinkedList2):
-    num1 = convert_LinkedList_to_number(LinkedList1)
-    num2 = convert_LinkedList_to_number(LinkedList2)
+def plus_2_linked_list(LinkedList1, LinkedList2):
+    num1 = convert_linked_list_to_number(LinkedList1)
+    num2 = convert_linked_list_to_number(LinkedList2)
     result = num1 + num2
     return result
 
-def convert_LinkedList_to_number(LinkedList):
+def convert_linked_list_to_number(LinkedList):
     i = pow(10, LinkedList.length - 1)
     result = 0
     current_node = LinkedList.tail
@@ -19,7 +18,7 @@ def convert_LinkedList_to_number(LinkedList):
     return result
 
 def sum_lists(LinkedList1, LinkedList2):
-    sum = plus_2_LinkedList(LinkedList1, LinkedList2)
+    sum = plus_2_linked_list(LinkedList1, LinkedList2)
     SumList = DoublyLinkedList()
     
     while sum != 0:
