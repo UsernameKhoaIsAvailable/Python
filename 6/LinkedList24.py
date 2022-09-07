@@ -10,15 +10,11 @@ class LinkedList24(LinkedList):
                 self.head = current_node
                 current_node = prev_node.next
                    
-            # if current_node.data >= x:
             else:
                 prev_node.next = current_node
                 prev_node = current_node
                 current_node = current_node.next
-            # prev_node = current_node
-
-            
-
+           
 ex = LinkedList24()
 ex.add(9)
 ex.add(1)
