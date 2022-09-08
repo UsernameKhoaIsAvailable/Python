@@ -1,7 +1,7 @@
 from linked_list import LinkedList
 class LinkedList22(LinkedList):
     def return_Kth_to_last(self, K):
-        if self.length < K or K < 0:
+        if self.length <= K or K < 0:
             raise Exception(f"Cannot return the {K}th to last element")
         index = self.length - K - 1
         current_node = self.head
