@@ -1,6 +1,6 @@
 from linked_list import LinkedList
-def palindrome(LinkedList):
-    current_node =LinkedList.head
+def palindrome(list):
+    current_node =list.head
     palindrome_str = ''
     while current_node != None:
         palindrome_str += str(current_node.data)
