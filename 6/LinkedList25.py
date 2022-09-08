@@ -1,15 +1,15 @@
-from Doubly_LinkedList import DoublyLinkedList
+from doubly_linked_list import DoublyLinkedList
 
-def plus_2_linked_list(LinkedList1, LinkedList2):
-    num1 = convert_linked_list_to_number(LinkedList1)
-    num2 = convert_linked_list_to_number(LinkedList2)
+def plus_2_linked_list(list1, list2):
+    num1 = convert_linked_list_to_number(list1)
+    num2 = convert_linked_list_to_number(list2)
     result = num1 + num2
     return result
 
-def convert_linked_list_to_number(LinkedList):
-    i = pow(10, LinkedList.length - 1)
+def convert_linked_list_to_number(list):
+    i = pow(10, list.length - 1)
     result = 0
-    current_node = LinkedList.tail
+    current_node = list.tail
     while current_node != None:
         result += current_node.data * i
         current_node = current_node.prev
@@ -17,8 +17,8 @@ def convert_linked_list_to_number(LinkedList):
 
     return result
 
-def sum_lists(LinkedList1, LinkedList2):
-    sum = plus_2_linked_list(LinkedList1, LinkedList2)
+def sum_lists(list1, list2):
+    sum = plus_2_linked_list(list1, list2)
     SumList = DoublyLinkedList()
     
     while sum != 0:
