@@ -1,7 +1,7 @@
 from linked_list import LinkedList
 class Stack(LinkedList):
     def empty(self):
-        return self.tail is None
+        return self.head is None
 
     def peek(self):
         return self.head
@@ -30,23 +30,36 @@ class Stack(LinkedList):
             index -= 1
 
         return -1
+
+    def __str__(self):
+        current_node = self.head
+        return_str = ''
+
+        while current_node != None:
+            return_str += str(current_node.data)
+            current_node = current_node.next
+
+            if current_node != None:
+                return_str += ' ,'
+
+        return return_str[::-1]    
     
 
 
 
-list = Stack()
-list.push(1)
-list.push(2)
-list.push(3)
-list.push(4)
-list.push(5)
-list.push(6)
-list.push(7)
-list.push(8)
-print(list)
-print(list.pop())
-print(list)
-print(list.search(5))
+# list = Stack()
+# list.push(1)
+# list.push(2)
+# list.push(3)
+# list.push(4)
+# list.push(5)
+# list.push(6)
+# list.push(7)
+# list.push(8)
+# print(list)
+# print(list.pop())
+# print(list)
+# print(list.search(5))
 
 
 
