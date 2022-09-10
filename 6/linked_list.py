@@ -26,7 +26,9 @@ class LinkedList:
         self.length = 0
 
     def add_at(self, index, new_data):
-        if self.length <= index:
+        if self.length == 0:
+            pass
+        elif self.length <= index:
             raise Exception(f"Cannot insert at index {index}")
 
         new_node = Node(new_data)
