@@ -9,7 +9,7 @@ class LinkedList:
         self.head = None
         self.tail = None
         
-    def push(self, new_data):
+    def add(self, new_data):
         new_node = Node(new_data)
 
         if self.head == None:
@@ -62,9 +62,9 @@ class LinkedList:
             current_node = current_node.next
 
             if current_node != None:
-                return_str += ' ,'
+                return_str += ', '
 
-        return return_str[::-1]    
+        return return_str    
 
     def add_first(self, data):
         self.add_at(0, data)
@@ -136,7 +136,9 @@ class LinkedList:
         return -1       
         
     def remove_at(self, index):
-        if self.length <= index:
+        if index == 0:
+            pass
+        elif self.length <= index:
             raise Exception(f"Cannot remove data at index {index}")
 
         self.length -= 1
@@ -211,18 +213,18 @@ class LinkedList:
     def size(self):
         return self.length
 
-ex = LinkedList()
-ex.push('qwerertyuio')
-ex.push('hello')
-ex.push('hello')
-ex.push('xinchao')
-ex.push('qwerertyuio')
-ex.push('qwerertyuio')
-ex.push('tambiet')
-ex.push('vinhbiet')
-ex.push('hfdjhfjshhf')
-ex.push('hfujhsfuhsfudhsfjdshf')
-ex.push('hfueeifonvfnvfueiewnf0')
+# ex = LinkedList()
+# ex.add('qwerertyuio')
+# ex.add('hello')
+# ex.add('hello')
+# ex.add('xinchao')
+# ex.add('qwerertyuio')
+# ex.add('qwerertyuio')
+# ex.add('tambiet')
+# ex.add('vinhbiet')
+# ex.add('hfdjhfjshhf')
+# ex.add('hfujhsfuhsfudhsfjdshf')
+# ex.add('hfueeifonvfnvfueiewnf0')
 # ex.add_at(4, 'fejhfddkndvdmxxcncnxzmcnz')
 # ex.add_first('poopjdknvdnvkseiasdjask')
 # print(ex.contains('hfdjhfjshhfdfdfd'))
