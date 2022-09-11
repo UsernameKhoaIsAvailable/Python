@@ -136,7 +136,9 @@ class LinkedList:
         return -1       
         
     def remove_at(self, index):
-        if self.length <= index:
+        if index == 0:
+            pass
+        elif self.length <= index:
             raise Exception(f"Cannot remove data at index {index}")
 
         self.length -= 1
@@ -211,18 +213,18 @@ class LinkedList:
     def size(self):
         return self.length
 
-ex = LinkedList()
-ex.add('qwerertyuio')
-ex.add('hello')
-ex.add('hello')
-ex.add('xinchao')
-ex.add('qwerertyuio')
-ex.add('qwerertyuio')
-ex.add('tambiet')
-ex.add('vinhbiet')
-ex.add('hfdjhfjshhf')
-ex.add('hfujhsfuhsfudhsfjdshf')
-ex.add('hfueeifonvfnvfueiewnf0')
+# ex = LinkedList()
+# ex.add('qwerertyuio')
+# ex.add('hello')
+# ex.add('hello')
+# ex.add('xinchao')
+# ex.add('qwerertyuio')
+# ex.add('qwerertyuio')
+# ex.add('tambiet')
+# ex.add('vinhbiet')
+# ex.add('hfdjhfjshhf')
+# ex.add('hfujhsfuhsfudhsfjdshf')
+# ex.add('hfueeifonvfnvfueiewnf0')
 # ex.add_at(4, 'fejhfddkndvdmxxcncnxzmcnz')
 # ex.add_first('poopjdknvdnvkseiasdjask')
 # print(ex.contains('hfdjhfjshhfdfdfd'))

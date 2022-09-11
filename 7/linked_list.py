@@ -69,6 +69,9 @@ class LinkedList:
     def add_first(self, data):
         self.add_at(0, data)
 
+        if self.tail == None:
+            self.tail = self.head
+
     def contains(self, data):
         current_node = self.head
 
@@ -237,6 +240,21 @@ class LinkedList:
 # print(ex.head.data)
 # print(ex.tail.data)
 # print(ex.size())
+# ex.add(1)
+# ex.add(2)
+# ex.add(3)
+# ex.add(4)
+# ex.add(2)
+# ex.add(1)
+# ex.add_first(56)
+# print(ex.tail.data)
+# ex.add_first(554)
+# ex.add_first(564)
+# ex.add_first(86)
+# ex.add_first(86)
+# ex.add_first(936)
+# print(ex.tail.data)
+# print(ex)
 
 
 

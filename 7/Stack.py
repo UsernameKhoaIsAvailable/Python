@@ -1,4 +1,8 @@
 from linked_list import LinkedList
+
+class EmptyStackException(Exception):
+    pass
+
 class Stack(LinkedList):
     def empty(self):
         return self.head is None
@@ -8,7 +12,7 @@ class Stack(LinkedList):
 
     def pop(self):
         if self.head is None:
-            raise Exception('EmptyStackException')
+            raise EmptyStackException
 
         return_node = self.head
         self.head = self.head.next
@@ -47,7 +51,8 @@ class Stack(LinkedList):
 
 
 
-# list = Stack()
+list = Stack()
+list.pop()
 # list.push(1)
 # list.push(2)
 # list.push(3)

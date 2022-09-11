@@ -6,10 +6,10 @@ def plus_2_linked_list(list1, list2):
     result = num1 + num2
     return result
 
-def convert_linked_list_to_number(list):
-    i = pow(10, list.length - 1)
+def convert_linked_list_to_number(llist):
+    i = pow(10, llist.length - 1)
     result = 0
-    current_node = list.tail
+    current_node = llist.tail
     while current_node != None:
         result += current_node.data * i
         current_node = current_node.prev
