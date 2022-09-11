@@ -9,7 +9,7 @@ class LinkedList:
         self.head = None
         self.tail = None
         
-    def add(self, new_data):
+    def add(self, new_data): #O(1)
         new_node = Node(new_data)
 
         if self.head == None:
@@ -20,12 +20,12 @@ class LinkedList:
         self.tail = new_node
         self.length += 1
 
-    def clear(self):
+    def clear(self): #O(1)
         self.head = None
         self.tail = None
         self.length = 0
 
-    def add_at(self, index, new_data):
+    def add_at(self, index, new_data): #O(self.length)
         if self.length == 0:
             pass
         elif self.length <= index:
@@ -53,7 +53,7 @@ class LinkedList:
             current_node = current_node.next
             i += 1
         
-    def __str__(self):
+    def __str__(self): #O(self.length)
         current_node = self.head
         return_str = ''
 
@@ -66,13 +66,13 @@ class LinkedList:
 
         return return_str    
 
-    def add_first(self, data):
+    def add_first(self, data): #O(1)
         self.add_at(0, data)
 
         if self.tail == None:
             self.tail = self.head
 
-    def contains(self, data):
+    def contains(self, data): #O(self.length)
         current_node = self.head
 
         while current_node != None:
@@ -83,7 +83,7 @@ class LinkedList:
 
         return False
 
-    def get(self, index):
+    def get(self, index): #O(self.length)
         if self.length <= index:
             raise Exception(f"Cannot get data at index {index}")
 
@@ -97,13 +97,13 @@ class LinkedList:
             i += 1
             current_node = current_node.next
 
-    def get_first(self):
+    def get_first(self): #O(1)
         return self.get(0)
 
-    def get_last(self):
+    def get_last(self): #O(1)
         return self.get(self.length - 1)
 
-    def index_of(self, data):
+    def index_of(self, data): #O(self.length)
         current_node = self.head
         i = 0
 
@@ -116,7 +116,7 @@ class LinkedList:
 
         return -1
     
-    def last_index_of(self, data):
+    def last_index_of(self, data): #O(self.length)
         current_node = self.head
         i = 0
         last_i = 0
@@ -138,7 +138,7 @@ class LinkedList:
 
         return -1       
         
-    def remove_at(self, index):
+    def remove_at(self, index): #O(self.length)
         if index == 0:
             pass
         elif self.length <= index:
@@ -167,7 +167,7 @@ class LinkedList:
             current_node = current_node.next
             i += 1
             
-    def remove(self, data):
+    def remove(self, data): #O(1)
         if self.head.data == data:
             self.remove_at(0)
             return
@@ -187,12 +187,12 @@ class LinkedList:
             prev_node = current_node
             current_node = current_node.next
 
-    def remove_last(self):
+    def remove_last(self): #O(self.length)
         node = self.tail
         self.remove_at(self.length - 1)
         return node.data
 
-    def set(self, index, data):
+    def set(self, index, data): #O(self.length)
         if self.length <= index:
             raise Exception(f"Cannot replace data at index {index}")
         if index == 0:
