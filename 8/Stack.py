@@ -21,7 +21,7 @@ class Stack(LinkedList):
     
     def push(self, data):
         self.add_first(data)
-
+        
     def search(self, data):
         current_node = self.head
         index = self.length - 1
@@ -48,13 +48,14 @@ class Stack(LinkedList):
 
         return return_str[::-1]    
 
+    
+
+    
 
 
 
-
-
-list = Stack()
-list.pop()
+# list = Stack()
+# list.pop()
 # list.push(1)
 # list.push(2)
 # list.push(3)
