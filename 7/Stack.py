@@ -53,8 +53,8 @@ class Stack(LinkedList):
 
 
 
-list = Stack()
-list.pop()
+# list = Stack()
+# # list.pop()
 # list.push(1)
 # list.push(2)
 # list.push(3)
