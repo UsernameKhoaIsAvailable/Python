@@ -1,4 +1,4 @@
-from Stack import Stack
+from stack import Stack
 class Stack32(Stack):
     def push(self, data):
         super().push(data)
@@ -14,7 +14,7 @@ class Stack32(Stack):
         super().__init__()
         self.min = 0
 
-    def Minimum(self):
+    def minimum(self):
         return self.min
 
 def main():
