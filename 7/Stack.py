@@ -8,7 +8,7 @@ class Stack(LinkedList):
         return self.head is None
 
     def peek(self):
-        return self.head
+        return self.head.data
 
     def pop(self):
         if self.head is None:
