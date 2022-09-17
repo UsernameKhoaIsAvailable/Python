@@ -1,21 +1,13 @@
-array = []
-num_of_stack = 0 
+array = [] 
 class Stack:
     def __init__(self):
-        global num_of_stack
         self.top_index = None
         self.length = 0
-        num_of_stack += 1
         
     def empty(self):
         return self.top_index is None
 
     def push(self, data):
-        # if num_of_stack == 1:
-        #     array.append(data)
-        #     self.length += 1
-        #     self.top_index = len(array) - 1
-        # else:
         if self.length == 0:
             array.append(data)
             self.top_index = len(array) - 1
