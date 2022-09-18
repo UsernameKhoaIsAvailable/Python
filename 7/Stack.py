@@ -3,15 +3,19 @@ from linked_list import LinkedList
 class EmptyStackException(Exception):
     pass
 
-class Stack(LinkedList):
+class Stack:
+
+    def __init__(self):
+        self.data_list = LinkedList()
+
     def empty(self):
-        return self.head is None
+        return self.data_list.head is None
 
     def peek(self):
-        return self.head.data
+        return self.data_list.head.data
 
     def pop(self):
-        if self.head is None:
+        if self.data_list.head is None:
             raise EmptyStackException
 
         return_node = self.head
@@ -20,11 +24,11 @@ class Stack(LinkedList):
         return return_node.data
     
     def push(self, data):
-        self.add_first(data)
+        self.data_list.add_first(data)
 
     def search(self, data):
-        current_node = self.head
-        index = self.length - 1
+        current_node = self.data_list.head
+        index = self.data_list.length - 1
 
         while current_node != None:
             if current_node.data == data:
@@ -35,8 +39,11 @@ class Stack(LinkedList):
 
         return -1
 
+    def size(self):
+        return self.data_list.length
+
     def __str__(self):
-        current_node = self.head
+        current_node = self.data_list.head
         return_str = ''
 
         while current_node != None:
