@@ -1,7 +1,9 @@
 from linked_list import LinkedList
 
+
 class EmptyStackException(Exception):
     pass
+
 
 class Stack:
 
@@ -30,7 +32,7 @@ class Stack:
         current_node = self.data_list.head
         index = self.data_list.length - 1
 
-        while current_node != None:
+        while current_node:
             if current_node.data == data:
                 return index
 
@@ -44,32 +46,31 @@ class Stack:
 
     def __str__(self):
         current_node = self.data_list.head
-        return_str = ''
+        _list = []
 
-        while current_node != None:
-            return_str += str(current_node.data)
+        while current_node:
+            _list.append(str(current_node.data))
             current_node = current_node.next
 
-            if current_node != None:
-                return_str += ' ,'
+        return ", ".join(_list[::-1])
 
-        return return_str[::-1]    
 
 def main():
-    list = Stack()
-    # list.pop()
-    list.push(1)
-    list.push(2)
-    list.push(3)
-    list.push(4)
-    list.push(5)
-    list.push(6)
-    list.push(7)
-    list.push(8)
-    print(list)
-    print(list.pop())
-    print(list)
-    # print(list.search(5))
+    _list = Stack()
+    # _list.pop()
+    _list.push(1)
+    _list.push(2)
+    _list.push(3)
+    _list.push(4)
+    _list.push(5)
+    _list.push(6)
+    _list.push(7)
+    _list.push(8)
+    print(_list)
+    print(_list.pop())
+    print(_list)
+    # print(_list.search(5))
+
 
 if __name__ == "__main__":
     main()
