@@ -18,9 +18,9 @@ class Stack:
         if self.data_list.head is None:
             raise EmptyStackException
 
-        return_node = self.head
-        self.head = self.head.next
-        self.length -= 1
+        return_node = self.data_list.head
+        self.data_list.head = self.data_list.head.next
+        self.data_list.length -= 1
         return return_node.data
     
     def push(self, data):
@@ -55,26 +55,23 @@ class Stack:
 
         return return_str[::-1]    
 
+def main():
+    list = Stack()
+    # list.pop()
+    list.push(1)
+    list.push(2)
+    list.push(3)
+    list.push(4)
+    list.push(5)
+    list.push(6)
+    list.push(7)
+    list.push(8)
+    print(list)
+    print(list.pop())
+    print(list)
+    # print(list.search(5))
 
-
-
-
-
-# list = Stack()
-# # list.pop()
-# list.push(1)
-# list.push(2)
-# list.push(3)
-# list.push(4)
-# list.push(5)
-# list.push(6)
-# list.push(7)
-# list.push(8)
-# print(list)
-# print(list.pop())
-# print(list)
-# print(list.search(5))
-
-
+if __name__ == "__main__":
+    main()
 
 

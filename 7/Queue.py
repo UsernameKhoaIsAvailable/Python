@@ -19,9 +19,8 @@ class Queue:
 
     def size(self):
         return self.data_list.length
-    
     def __str__(self):
-        return str(self.data_list.__str__())
+        return self.data_list.__str__() 
         
 def main():
     list = Queue()
@@ -33,13 +32,12 @@ def main():
     list.add(6)
     list.add(7)
     list.add(8)
-    # print(list)
-    # print(list.size())
-    # print(list.peek())
-    # print(list.poll())
-    # print(list)
-    # print(list.size())
-    # print(list.size())
-    
+    print(list)
+    print(list.size())
+    print(list.peek())
+    print(list.poll())
+    print(list)
+    print(list.size())
+
 if __name__ == "__main__":
     main()
