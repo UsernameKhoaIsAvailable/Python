@@ -1,8 +1,10 @@
 from linked_list import LinkedList
+
+
 class Queue:
     def __init__(self):
         self.data_list = LinkedList()
-    
+
     def add(self, data):
         self.data_list.add(data)
 
@@ -19,25 +21,28 @@ class Queue:
 
     def size(self):
         return self.data_list.length
+
     def __str__(self):
-        return self.data_list.__str__() 
-        
+        return self.data_list.__str__()
+
+
 def main():
-    list = Queue()
-    list.add(1)
-    list.add(2)
-    list.add(3)
-    list.add(4)
-    list.add(5)
-    list.add(6)
-    list.add(7)
-    list.add(8)
-    print(list)
-    print(list.size())
-    print(list.peek())
-    print(list.poll())
-    print(list)
-    print(list.size())
+    _list = Queue()
+    _list.add(1)
+    _list.add(2)
+    _list.add(3)
+    _list.add(4)
+    _list.add(5)
+    _list.add(6)
+    _list.add(7)
+    _list.add(8)
+    print(_list)
+    print(_list.size())
+    print(_list.peek())
+    print(_list.poll())
+    print(_list)
+    print(_list.size())
+
 
 if __name__ == "__main__":
     main()
