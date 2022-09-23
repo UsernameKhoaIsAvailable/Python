@@ -10,13 +10,13 @@ class Stack:
     def __init__(self):
         self.data_list = LinkedList()
 
-    def empty(self):
+    def empty(self): #O(1)
         return self.data_list.head is None
 
-    def peek(self):
+    def peek(self): #O(1)
         return self.data_list.head.data
 
-    def pop(self):
+    def pop(self): #O(1)
         if self.data_list.head is None:
             raise EmptyStackException
 
@@ -25,10 +25,10 @@ class Stack:
         self.data_list.length -= 1
         return return_node.data
     
-    def push(self, data):
+    def push(self, data): #O(1)
         self.data_list.add_first(data)
 
-    def search(self, data):
+    def search(self, data): #O(n)
         current_node = self.data_list.head
         index = self.data_list.length - 1
 
@@ -41,7 +41,7 @@ class Stack:
 
         return -1
 
-    def size(self):
+    def size(self): #O(1)
         return self.data_list.length
 
     def __str__(self):

@@ -5,21 +5,21 @@ class Queue:
     def __init__(self):
         self.data_list = LinkedList()
 
-    def add(self, data):
+    def add(self, data): #O(1)
         self.data_list.add(data)
 
-    def peek(self):
+    def peek(self): #O(1)
         return self.data_list.head.data
 
-    def poll(self):
+    def poll(self): #O(1)
         return_node = self.data_list.head
         self.data_list.remove_at(0)
         return return_node.data
 
-    def empty(self):
+    def empty(self): #O(1)
         return self.data_list.head is None
 
-    def size(self):
+    def size(self): #O(1)
         return self.data_list.length
 
     def __str__(self):

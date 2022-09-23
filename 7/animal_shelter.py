@@ -10,7 +10,7 @@ class AnimalShelter:
         self.dog_shelter = LinkedList()
         self.cat_shelter = LinkedList()
 
-    def enqueue(self, animal_type, name):
+    def enqueue(self, animal_type, name): #O(1)
         new_data = {
             'type': animal_type,
             'name': name,
@@ -24,7 +24,7 @@ class AnimalShelter:
 
         new_data['number'] = self.dog_shelter.length + self.cat_shelter.length
 
-    def dequeue_any(self):
+    def dequeue_any(self): #O(n)
         if self.dog_shelter.length + self.cat_shelter.length == 0:
             raise EmptyAnimalShelterException
 
@@ -35,26 +35,26 @@ class AnimalShelter:
             return_animal = self.cat_shelter.head
             self.cat_shelter.remove_at(0)
 
-        rearrange_dogs_cats_order(self)
+        self.rearrange_dogs_cats_order()
         return f"{return_animal.data['name']} the {return_animal.data['type']}"
 
-    def dequeue_dog(self):
+    def dequeue_dog(self): #O(n)
         if self.dog_shelter.length == 0:
             raise EmptyAnimalShelterException
 
         return_animal = self.dog_shelter.head
         self.dog_shelter.remove_at(0)
-        rearrange_dogs_cats_order(self)
+        self.rearrange_dogs_cats_order()
 
         return f"{return_animal.data['name']} the {return_animal.data['type']}"
 
-    def dequeue_cat(self):
+    def dequeue_cat(self): #O(n)
         if self.cat_shelter.length == 0:
             raise EmptyAnimalShelterException
 
         return_animal = self.cat_shelter.head
         self.cat_shelter.remove_at(0)
-        rearrange_dogs_cats_order(self)
+        self.rearrange_dogs_cats_order()
 
         return f"{return_animal.data['name']} the {return_animal.data['type']}"
 
@@ -91,25 +91,24 @@ class AnimalShelter:
 
         return return_str
 
+    def rearrange_dogs_cats_order(self): #O(n)
+        current_node1 = self.dog_shelter.head
 
-def rearrange_dogs_cats_order(_list: AnimalShelter):
-    current_node1 = _list.dog_shelter.head
+        if self.dog_shelter.head.data['number'] == 1:
+            current_node1 = current_node1.next
 
-    if _list.dog_shelter.head.data['number'] == 1:
-        current_node1 = current_node1.next
+        current_node2 = self.cat_shelter.head
 
-    current_node2 = _list.cat_shelter.head
+        if self.cat_shelter.head.data['number'] == 1:
+            current_node2 = current_node2.next
 
-    if _list.cat_shelter.head.data['number'] == 1:
-        current_node2 = current_node2.next
+        while current_node1:
+            current_node1.data['number'] -= 1
+            current_node1 = current_node1.next
 
-    while current_node1:
-        current_node1.data['number'] -= 1
-        current_node1 = current_node1.next
-
-    while current_node2:
-        current_node2.data['number'] -= 1
-        current_node2 = current_node2.next
+        while current_node2:
+            current_node2.data['number'] -= 1
+            current_node2 = current_node2.next
 
 
 def main():
